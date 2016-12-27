@@ -1,0 +1,15 @@
+
+{
+  "labId": "data-explore-using-zeppelin",
+  "title": "DATA EXPLORATION, ANALYSIS AND VISUALIZATION USING APACHE ZEPPELIN",
+  "slug": "Learn how data engineers, data analysts and data scientists can be more productive",
+  "time": 10,
+  "tags": [
+    {"title": "data"},
+    {"title": "DLP"}
+  ],
+  "files": [
+    {"title": "1.md"}
+  ],
+  "active": true
+}
