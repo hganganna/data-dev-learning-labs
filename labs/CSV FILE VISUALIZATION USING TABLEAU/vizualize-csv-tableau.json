@@ -1,7 +1,7 @@
 {
-    "labId": "vizualize-csv-tableau",
-    "title": "Visualizing CSV with Tableau",
-    "slug": "Visualizing CSV with Tableau",
+    "labId": “CSV_file_visualization_using_Tableau”,
+    "title": “CSV FILE VISUALIZATION USING TABLEAU”,
+    "slug": “CSV FILE VISUALIZATION USING TABLEAU“,
     "time": "30",
     "tags": [{
         "title": "data"
@@ -12,12 +12,10 @@
     }],
     "files": [{
         "title": "1.md"
-    }, {
-        "title": "2.md"
     }],
     "authors": [{
-        "name": "John Perry",
-        "email": "jperry2@cisco.com"
+        "name": “Leena P.G”,
+        "email": “lpalamth@cisco.com"
     }],
     "active": true
 }
