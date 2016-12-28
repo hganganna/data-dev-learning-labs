@@ -14,14 +14,10 @@
     }, {"title": "Intermediate"}],
     "files": [{
         "title": "1.md"
-    }, {
-        "title": "2.md"
-    }, {
-        "title": "3.md"
     }],
     "authors": [{
-        "name": "Ashley Roach",
-        "email": "asroach@cisco.com"
+        "name": “Leena P G“,
+        "email": “lpalamth@cisco.com"
     }],
     "active": true
 }
