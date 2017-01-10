@@ -1,0 +1,21 @@
+{
+	"labId": "STREAM HANDLING WITH CISCO CONNECTED STREAMING ANALYTICS (CSA)",
+	"title": "STREAM HANDLING WITH CISCO CONNECTED STREAMING ANALYTICS (CSA)",
+	"slug": "STREAM HANDLING WITH CISCO CONNECTED STREAMING ANALYTICS (CSA)",
+	"time": "30",
+	"tags": [{
+		"title": "data"
+	}, {
+		"title": "DLP"
+	}, {
+		"title": "Intermediate"
+	}],
+	"files": [{
+		"title": "1.md"
+	}],
+	"authors": [{
+		"name": "Leena P.G",
+		"email": "lpalamth@cisco.com"
+	}],
+	"active": true
+}

@@ -1,6 +1,6 @@
 {
-    "labId": "word-count-using-spark",
-    "title": "How to use IDE in DLP to create a WordCount program ",
+    "labId": "WORD COUNT USING SCALA WITH APACHE SPARK",
+    "title": "WORD COUNT USING SCALA WITH APACHE SPARK",
     "slug": "Learn how to use IDE in DLP to create a WordCount program and how to execute it to get the intended result.",
     "time": "30",
     "tags": [

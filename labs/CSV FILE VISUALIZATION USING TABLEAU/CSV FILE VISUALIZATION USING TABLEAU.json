@@ -1,0 +1,21 @@
+{
+	"labId": "CSV FILE VISUALIZATION USING TABLEAU",
+	"title": "CSV FILE VISUALIZATION USING TABLEAU",
+	"slug": "CSV FILE VISUALIZATION USING TABLEAU",
+	"time": "30",
+	"tags": [{
+		"title": "data"
+	}, {
+		"title": "tableau"
+	}, {
+		"title": "csv"
+	}],
+	"files": [{
+		"title": "1.md"
+	}],
+	"authors": [{
+		"name": "Leena P.G",
+		"email": "lpalamth @cisco.com"
+	}],
+	"active": true
+}
