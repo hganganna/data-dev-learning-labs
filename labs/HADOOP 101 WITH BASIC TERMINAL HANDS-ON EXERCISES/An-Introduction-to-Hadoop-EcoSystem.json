@@ -1,17 +1,20 @@
 {
-    "labId": “HOW TO EXECUTE BASIC COMMAND IN HADOOP TERMINAL”,
-    "title": “HOW TO EXECUTE BASIC COMMAND IN HADOOP TERMINAL“,
-    "slug": “HOW TO EXECUTE BASIC COMMAND IN HADOOP TERMINAL”,
-    "time": "30",
-    "tags": [
-              {"title": "data"}, 
-              {"title": "DLP"}
-            ],
-    "files": [
-               {"title": "1.md”},{"title": “2.md”},"title": “3.md”}
-             ],
+  "labId": “HADOOP 101 WITH BASIC TERMINAL HANDS-ON EXERCISES”,
+  "title": "HADOOP 101 WITH BASIC TERMINAL HANDS-ON EXERCISES",
+  "slug": "Learn how to execute basic HDFS commands using Hadoop Command Line Interface“,
+  "time": 30,
+  "tags": [
+    {"title": "data"},
+    {"title": "DLP"}
+  ],
+  "files": [
+    {"title": "1.md"},
+	{"title": "2.md"},
+	{"title": "3.md"}
+  ],
     "authors": [
-                 {“Leena P G”: “”,”lpalamth@cisco.com”: ""}
+                 {"name": "Leena P.G","email": "lpalamth@cisco.com"}
                ],
-    "active": true
+  "active": true
 }
+

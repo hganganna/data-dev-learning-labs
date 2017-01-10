@@ -15,9 +15,8 @@
     "files": [{
         "title": "1.md"
     }],
-    "authors": [{
-        "name": “Leena P G“,
-        "email": “lpalamth@cisco.com"
-    }],
+    "authors": [
+                 {"name": "Leena P.G","email": "lpalamth@cisco.com"}
+               ],
     "active": true
 }

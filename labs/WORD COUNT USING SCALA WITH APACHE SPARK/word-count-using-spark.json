@@ -11,7 +11,7 @@
                {"title": "1.md"}
              ],
     "authors": [
-                 {“Leena P G“: “”,”lpalamth@cisco.com”: ""}
+                 {"name": "Leena P.G","email": "lpalamth@cisco.com"}
                ],
     "active": true
 }
