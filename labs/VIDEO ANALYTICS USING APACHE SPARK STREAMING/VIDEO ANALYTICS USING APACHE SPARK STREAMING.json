@@ -1,6 +1,6 @@
 {
 	"labId": "VIDEO ANALYTICS USING APACHE SPARK STREAMING",
-	"title": "VIDEO ANALYTICS USING APACHE SPARK STREAMING",
+	"title": "Video analytics using Apache Spark streaming",
 	"slug": "Learn how to integrate SparkStreaming with Kafka",
 	"time": 30,
 	"tags": [{
