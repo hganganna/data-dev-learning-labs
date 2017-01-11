@@ -1,6 +1,6 @@
 {
 	"labId": "NETWORK DATA INGESTION",
-	"title": "Network Data Ingestion",
+	"title": "NETWORK DATA INGESTION",
 	"slug": "Learn how you can have network data flow from a local network through Kafka in HDFS.",
 	"time": "30",
 	"tags": [{
