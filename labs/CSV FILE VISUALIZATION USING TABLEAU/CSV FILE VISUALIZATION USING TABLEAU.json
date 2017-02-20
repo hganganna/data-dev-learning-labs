@@ -4,6 +4,8 @@
 	"slug": "CSV file visualization using Tableau",
 	"time": "30",
 	"tags": [{
+		"title": "data"
+	}, {
 		"title": "DLP"
 	}, {
 		"title": "tableau"
