@@ -1,0 +1,20 @@
+{
+	"labId": "MACHINE LEARNING TUTORIAL THROUGH HANDWRITTEN DIGIT RECOGNITION",
+	"title": "Machine Learning tutorial through Handwritten Digit Recognition",
+	"slug": "Machine Learning tutorial through Handwritten Digit Recognition",
+	"time": 30,
+	"tags": [{
+		"title": "data"
+	}, {
+		"title": "DLP"
+	}],
+	"files": [{
+		"title": "1.md"
+	}],
+
+	"authors": [{
+		"name": "Leena P.G",
+		"email": "lpalamth@cisco.com"
+	}],
+	"active": true
+}
