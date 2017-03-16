@@ -54,4 +54,4 @@ On login, you will be directed to the DevNet DTLP (Data Technology Learning Plat
 
 ## LESSONS LEARNT :
 
-1. How to obtain access to Data Technology Learning Platform (DTLP)
+1. How to obtain access to Data Technology Learning Platform (DTLP).
