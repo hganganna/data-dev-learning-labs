@@ -1,4 +1,14 @@
-Please follow the steps given below to obtain access to DTLP (Data Technology Learning Platform)
+# HOW TO OBTAIN ACCESS TO DATA TECHNOLOGY LEARNING PLATFORM (DTLP)
+
+
+### WHAT IS DTLP? ###
+
+The DevNet Data Technology Learning Platform (DTLP) is a Big-Data learning platform connected with an easy to learn UI to help you break into the world of Big-Data development.  Backed with Docker, best-in-class open source Big-Data tools and Cisco API’s, Big-Data Scientists and Developers can leverage DTLP to easily build solutions, visualize data and turn POC’s for production applications. The DTLP environment comes with an inbuilt cloud based IDE (Integrated Development Environment) built on Hadoop.
+
+For more details, please refer:</br>
+https://developer.cisco.com/site/dlp/docs/overview/</br>
+
+Please follow the steps given below to obtain access to Data Technology Learning Platform(DTLP)
 
 ### <b>Step 1 : Access DLP website</b>
 
