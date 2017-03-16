@@ -33,7 +33,7 @@ On click of "Register Account":
 
 <img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/WORD%20COUNT%20USING%20SCALA%20WITH%20APACHE%20SPARK/assets/images/UserAccess6.jpeg?raw=true" data-canonical-src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/WORD%20COUNT%20USING%20SCALA%20WITH%20APACHE%20SPARK/assets/images/UserAccess6.jpeg?raw=true" width="300" height="400" />
 
-On successful registration, navigate back to the DTLP login page and login with the credentials created:
+On successful registration, navigate back to the DTLP login page (follow instructions from start again) and login with the credentials created:
 
 ![alt-tag](https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/WORD%20COUNT%20USING%20SCALA%20WITH%20APACHE%20SPARK/assets/images/UserAccess3.jpeg?raw=true)
 
