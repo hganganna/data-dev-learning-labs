@@ -33,12 +33,11 @@ On click of button:
 
 Click on “Register Account” button and create a new login profile. Please refer the screen below:
 
-<img src="hhttps://github.com/CiscoDevNet/data-dev-learning-labs/blob/master/labs/WORD%20COUNT%20USING%20SCALA%20WITH%20APACHE%20SPARK/assets/images/UserAccess8.jpeg?raw=true" data-canonical-src="https://github.com/CiscoDevNet/data-dev-learning-labs/blob/master/labs/WORD%20COUNT%20USING%20SCALA%20WITH%20APACHE%20SPARK/assets/images/UserAccess8.jpeg?raw=true" width="400" height="300" />
+<img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/WORD%20COUNT%20USING%20SCALA%20WITH%20APACHE%20SPARK/assets/images/UserAccess8.jpeg?raw=true" data-canonical-src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/WORD%20COUNT%20USING%20SCALA%20WITH%20APACHE%20SPARK/assets/images/UserAccess8.jpeg?raw=true" width="400" height="300" />
 
 On click of "Register Account":
 
 ![alt-tag](https://github.com/CiscoDevNet/data-dev-learning-labs/blob/master/labs/WORD%20COUNT%20USING%20SCALA%20WITH%20APACHE%20SPARK/assets/images/UserAccess5.jpeg?raw=true)
-
 
 <img src="https://github.com/CiscoDevNet/data-dev-learning-labs/blob/master/labs/WORD%20COUNT%20USING%20SCALA%20WITH%20APACHE%20SPARK/assets/images/UserAccess6.jpeg?raw=true" data-canonical-src="https://github.com/CiscoDevNet/data-dev-learning-labs/blob/master/labs/WORD%20COUNT%20USING%20SCALA%20WITH%20APACHE%20SPARK/assets/images/UserAccess6.jpeg?raw=true" width="300" height="400" />
 
