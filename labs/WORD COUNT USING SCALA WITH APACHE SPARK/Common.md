@@ -1,4 +1,4 @@
-Please follow the steps given below to get access to DTLP (Data Technology Learning Platform)
+Please follow the steps given below to obtain access to DTLP (Data Technology Learning Platform)
 
 ### <b>Step 1 : Access DLP website</b>
 
