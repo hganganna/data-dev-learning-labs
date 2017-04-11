@@ -1,0 +1,142 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Untitled Document.md</title><style></style></head><body id="preview">
+<h1><a id="DATA_INTEGRATION_0"></a>DATA INTEGRATION</h1>
+<p><strong>Executed on</strong>: Hadoop Big Data Platform</p>
+<h2><a id="OVERVIEW_4"></a>OVERVIEW</h2>
+<p>This learning lab can be used as a guide to get a high level understanding of Data Integration.</p>
+<p>“Data Integration” refers to combining data from incompatible sources into meaningful and valuable information.</p>
+<p>Please refer the example shown below to get a high level understanding:</p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration1.jpeg" alt="alt-tag"></p>
+<p>We will be using DevNet Data Learning Platform referred as “DLP” during the course.</p>
+<h2><a id="PREREQUISITES_16"></a>PRE-REQUISITES</h2>
+<ol>
+<li>
+<p>Install Chrome Browser.</p>
+</li>
+<li>
+<p>Basic Knowledge of data storage on Hadoop.</p>
+</li>
+<li>
+<p>Obtain access to Data Learning Platform -<br>
+Refer: <a href="https://github.com/CiscoDevNet/data-dev-learning-labs/blob/master/labs/WORD%20COUNT%20USING%20SCALA%20WITH%20APACHE%20SPARK/HowToAccessDTLP.md">https://github.com/CiscoDevNet/data-dev-learning-labs/blob/master/labs/WORD COUNT USING SCALA WITH APACHE SPARK/HowToAccessDTLP.md</a></p>
+</li>
+</ol>
+<h2><a id="LEARNING_OBJECTIVES_25"></a>LEARNING OBJECTIVES</h2>
+<ol>
+<li>
+<p>To get familiarized with the DLP (Data Learning Platform).</p>
+</li>
+<li>
+<p>Understand the basics of Data Integration.</p>
+</li>
+<li>
+<p>Learn how to use different data sources for data integration.</p>
+</li>
+<li>
+<p>Learn how to apply transformation logic to combine and display data from different data sources.</p>
+</li>
+</ol>
+<h2><a id="TERMINOLOGIES_USED_36"></a>TERMINOLOGIES USED</h2>
+<h3><a id="WHAT_IS_DATA_INTEGRATION__AN_INTRODUCTION_38"></a>WHAT IS DATA INTEGRATION? - AN INTRODUCTION</h3>
+<p>“Data Integration” refers to combining data from incompatible sources into meaningful and valuable information.<br>
+Please refer the example shown below to get a high level understanding :</p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration2.jpeg?raw=true" alt="alt-tag"></p>
+<p>We are using two different data sources here:</p>
+<ol>
+<li>
+<p>MySQL - RDBMS data source.</p>
+</li>
+<li>
+<p>Hive - Hadoop data source.</p>
+</li>
+</ol>
+<p>Consider an organization with these two different data sources intends to develop an application or a report. A unified data store is required where data from both the above two data sources can be saved. There should be a unique key or an ID to identify and match the records in each of these data sources. The unified view thus created helps users to get a better understanding of the data, faster decision making, Operational efficiency, Competitive advantage in the market etc.</p>
+<h2><a id="PROCESS_OVERVIEW_53"></a>PROCESS OVERVIEW</h2>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/WORD%20COUNT%20USING%20SCALA%20WITH%20APACHE%20SPARK/assets/images/Process12.jpeg?raw=true" alt="alt-tag"></p>
+<p>Please follow the steps given below to launch the workspace and execute the lab.</p>
+<h3><a id="Step_1_Select_Learning_lab_from_DLP_59"></a><strong>Step 1: Select Learning lab from DLP</strong></h3>
+<p>After launching the DLP dashboard page, navigate to learning labs tab. Select the learning lab “Data Integration” and click on “Start” button as shown in screenshot below:</p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration4.jpeg?raw=true" alt="alt-tag"></p>
+<h3><a id="Step_2_Workspace_Page_66"></a><strong>Step 2: Workspace Page</strong></h3>
+<p>On click of Start button, user will be navigated to a workspace page where all the components - Tools and Microservices required to execute the program are available. Please refer the screenshot below:</p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration5.jpeg?raw=true" alt="alt-tag"></p>
+<h3><a id="Step_3_Launch_Data_Integration_Configuration_Panel_73"></a><strong>Step 3: Launch Data Integration Configuration Panel</strong></h3>
+<p>Click on “Launch” button under “Tools and Microservices” to launch the configuration panel. Please refer screenshot below:</p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration3.jpeg?raw=true" alt="alt-tag"></p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration6.jpeg?raw=true" alt="alt-tag"></p>
+<p>There are primarily 3 different data transformation operations performed on the data.</p>
+<p>1.Join</p>
+<p>2.ABS</p>
+<p>3.Sort</p>
+<p><strong>Join Operation:</strong></p>
+<p>JOIN operation helps to merge data from multiple data sources and extract data based on the common fields. In our use case, the inner join will extract data from mysql and hive databases based on the common field - “ID”. If the ID field matches then the data is extracted and the combined data is displayed in a tabular format.</p>
+<p>There are 3 different Join operations supported:</p>
+<ol>
+<li>Inner Join :</li>
+</ol>
+<p>Inner join helps to select records from both the tables(Mysql and Hive tables used as an example here) as long as there is a match between the key fields selected(ID field used in the example shown below) :</p>
+<p>Please refer the screenshot below for more details.</p>
+<p>Configure input:</p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration7.jpeg?raw=true" alt="alt-tag"></p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration8.jpeg?raw=true" alt="alt-tag"></p>
+<p>View output:</p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration9.jpeg?raw=true" alt="alt-tag"></p>
+<ol start="2">
+<li>Full Outer Join :</li>
+</ol>
+<p>Full outer join will select all the rows from both the tables(Mysql and Hive tables used as an example here) and displays the combined data in tabular format. It puts NULL in the columns where related records do not exist in the opposite table.</p>
+<p>Please refer the screenshot below for more details.</p>
+<p>Configure input:</p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration10.jpeg?raw=true" alt="alt-tag"></p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration12.jpeg?raw=true" alt="alt-tag"></p>
+<p>View output:</p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration.jpeg?raw=true" alt="alt-tag"></p>
+<ol start="3">
+<li>Left Join :</li>
+</ol>
+<p>Left Join gets all records from the LEFT linked table but if you have selected some columns from the RIGHT table and if there is no related records then those columns will be marked as NULL.</p>
+<p>Please refer the screenshot below for more details.</p>
+<p>Configure input:</p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration13.jpeg?raw=true" alt="alt-tag"></p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration14.jpeg?raw=true" alt="alt-tag"></p>
+<p>View output:</p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration15.jpeg?raw=true" alt="alt-tag"></p>
+<ol start="4">
+<li>ABS Operation:</li>
+</ol>
+<p>ABS stands for Absolute value. ABS function displays any “Integer” field in Absolute format.</p>
+<p>Please refer the screenshot below for more details.</p>
+<p>Configure input:</p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration16.jpeg?raw=true" alt="alt-tag"></p>
+<p>View output:<br>
+<img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration17.jpeg?raw=true" alt="alt-tag"></p>
+<ol start="5">
+<li>Sort Operation:</li>
+</ol>
+<p>Sort function is used to display the records of a table selected in sorted order. Sort operation works based on a specific field selected. There are sort orders - Ascending and Descending. Based on your selected field and sort order type, the output is displayed in tabular format.</p>
+<p>Sort - Ascending:</p>
+<p>Please refer the screenshot below for more details:</p>
+<p>Configure input:</p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration18.jpeg?raw=true" alt="alt-tag"></p>
+<p>View output:</p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration19.jpeg?raw=true" alt="alt-tag"></p>
+<p>Sort - Descending:</p>
+<p>Please refer the screenshot below for more details:</p>
+<p>Configure input:</p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration20.jpeg?raw=true" alt="alt-tag"></p>
+<p>View output:</p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration21.jpeg?raw=true" alt="alt-tag"></p>
+<h2><a id="LESSONS_LEARNT_189"></a>LESSONS LEARNT:</h2>
+<ol>
+<li>
+<p>Basics of Data Integration.</p>
+</li>
+<li>
+<p>How to use different data sources for data integration.</p>
+</li>
+<li>
+<p>How to apply transformation logic to combine and display data from different data sources.</p>
+</li>
+</ol>
+<h1><a id="Congratulations_You_have_successfully_completed_the_Learning_Lab_197"></a><strong>Congratulations! You have successfully completed the Learning Lab!</strong></h1>
+
+</body></html>

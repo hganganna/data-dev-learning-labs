@@ -1,0 +1,101 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Untitled Document.md</title><style></style></head><body id="preview">
+<h1><a id="NETWORK_DATA_INGESTION_0"></a>NETWORK DATA INGESTION</h1>
+<p><strong>Stream Processing Platform Used</strong>: Apache Kafka</p>
+<p><strong>Executed on</strong>: Hadoop Big Data Platform</p>
+<h2><a id="OVERVIEW_7"></a>OVERVIEW</h2>
+<p>This learning lab can be used as a guide to get a high level understanding on the process of ingesting network data in to Hadoop environment. We will be using DevNet Data Learning Platform referred as “DLP” during the course. In this lab, the network stream data is already pre-created. From DLP platform, the user can access it directly. A data collection server, as shown in the diagram below, is collecting data in real time from the local network. The data collected by the Server is working with a Client residing in DLP to transfer the network data collected through Kafka. Using Kafka socket code, we are making a connection to the client that captures the network data and sends it to a Kafka topic. From this topic, data will be moved to HDFS by a Consumer program. The diagram shows how exactly network data flows from a local network through Kafka in HDFS and gets transformed.</p>
+<p>Please refer the example shown below to get a high level understanding:</p>
+<p><img src="https://github.com/CiscoDevNet/data-dev-learning-labs/blob/master/labs/NETWORK%20DATA%20INGESTION/assets/images/flow1.png?raw=true" alt="alt-tag"></p>
+<h2><a id="PREREQUISITES_16"></a>PRE-REQUISITES</h2>
+<ol>
+<li>
+<p>Install Chrome Browser.</p>
+</li>
+<li>
+<p>Basic Knowledge of data storage on Hadoop.</p>
+</li>
+<li>
+<p>Basic knowledge of Apache Kafka.</p>
+</li>
+<li>
+<p>Obtain access to Data Learning Platform -<br>
+Refer: <a href="https://github.com/CiscoDevNet/data-dev-learning-labs/blob/master/labs/WORD%20COUNT%20USING%20SCALA%20WITH%20APACHE%20SPARK/HowToAccessDTLP.md">https://github.com/CiscoDevNet/data-dev-learning-labs/blob/master/labs/WORD COUNT USING SCALA WITH APACHE SPARK/HowToAccessDTLP.md</a></p>
+</li>
+</ol>
+<h2><a id="LEARNING_OBJECTIVES_28"></a>LEARNING OBJECTIVES</h2>
+<ol>
+<li>
+<p>To get familiarized with the DLP (Data Learning Platform).</p>
+</li>
+<li>
+<p>To get familiarized with the ways to get network data from HDFS.</p>
+</li>
+<li>
+<p>To get familiarized with the ways to ingest network streaming data.</p>
+</li>
+<li>
+<p>To get familiarized with the method of visualizing network data from DLP platform.</p>
+</li>
+</ol>
+<h2><a id="TERMINOLOGIES_USED_39"></a>TERMINOLOGIES USED</h2>
+<h3><a id="WHAT_IS_NETWORK_DATA__AN_INTRODUCTION_42"></a>WHAT IS NETWORK DATA? - AN INTRODUCTION</h3>
+<p>The Computer network is a telecommunication process which allows computers or devices to exchange data between each other using data pipeline and those devices that are controlled by wired or wireless medium. Those devices are kept alive by exchanging data between each other in a continuous way.</p>
+<p>These network data provide the inside details about communication performance between of two devices that are communicating. We can extract lots of valuable information from those data set if we can capture those data in real time.</p>
+<h2><a id="APACHE_KAFKA__AN_INTRODUCTION_48"></a>APACHE KAFKA? - AN INTRODUCTION</h2>
+<p>Kafka is a distributed streaming platform that is designed to be fast, scalable, and durable. It has 3 key capabilities:</p>
+<ol>
+<li>It lets you publish and subscribe to streams of records. In this respect it is similar to a message queue or enterprise messaging system.</li>
+<li>It lets you store streams of records in a fault-tolerant way.</li>
+<li>It lets you process streams of records as they occur.</li>
+</ol>
+<p>It is used for two broad classes of application:</p>
+<ol>
+<li>Building real-time streaming data pipelines that reliably get data between systems or applications</li>
+<li>Building real-time streaming applications that transform or react to the streams of data</li>
+</ol>
+<p>For more details, please refer:<br>
+<a href="https://kafka.apache.org/">https://kafka.apache.org/</a></p>
+<h2><a id="PROCESS_OVERVIEW_65"></a>PROCESS OVERVIEW</h2>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/WORD%20COUNT%20USING%20SCALA%20WITH%20APACHE%20SPARK/assets/images/Process8.jpeg?raw=true" alt="alt-tag"></p>
+<p>Please follow the steps given below to launch the workspace and execute the lab.</p>
+<h3><a id="Step_1__Select_Learning_lab_from_DLP_71"></a><strong>Step 1 : Select Learning lab from DLP</strong></h3>
+<p>After launching the DLP dashboard page, navigate to learning labs tab. Select the learning lab “Network Data Ingestion” and click on “Start” button as shown in screenshot below:</p>
+<p><img src="https://github.com/CiscoDevNet/data-dev-learning-labs/blob/master/labs/NETWORK%20DATA%20INGESTION/assets/images/NetworkDataIngestion8.png?raw=true" alt="alt-tag"></p>
+<h3><a id="Step_2__Workspace_Page_78"></a><strong>Step 2 : Workspace Page</strong></h3>
+<p>On click of Start button, user will be navigated to a workspace page where all the components - IDE, Tools and Microservices required to execute the program are available. Please refer the screenshot below:</p>
+<p><img src="https://github.com/CiscoDevNet/data-dev-learning-labs/blob/master/labs/NETWORK%20DATA%20INGESTION/assets/images/NetworkDataIngestion2.png?raw=true" alt="alt-tag"></p>
+<h3><a id="Step_3__Start_Tasks_in_workspace_84"></a><strong>Step 3 : Start Tasks in workspace</strong></h3>
+<p>Points to Note:</p>
+<ul>
+<li>Start the tasks in “Data Source” and “Transform” columns.Please refer screenshot below:</li>
+</ul>
+<p><img src="https://github.com/CiscoDevNet/data-dev-learning-labs/blob/master/labs/NETWORK%20DATA%20INGESTION/assets/images/NetworkDataIngestion5.png?raw=true" alt="alt-tag"></p>
+<ul>
+<li>Once started, the colour of the icons change to green as shown in screen below:</li>
+</ul>
+<p><img src="https://github.com/CiscoDevNet/data-dev-learning-labs/blob/master/labs/NETWORK%20DATA%20INGESTION/assets/images/NetworkDataIngestion3.png?raw=true" alt="alt-tag"></p>
+<ul>
+<li>If the task is in stopped status then click on it to start again.</li>
+</ul>
+<p>Data source section will get network real-time traffic from traffic server and feed to Kafka cluster. The transform section allows to save the real-time data to HDFS. From HDFS, we can visualise the data using visualization tool like Tableau.</p>
+<p>The generated output file is shown in section - “Data Source - file”.&lt;/br&gt;</p>
+<p><img src="https://github.com/CiscoDevNet/data-dev-learning-labs/blob/master/labs/NETWORK%20DATA%20INGESTION/assets/images/NetworkDataIngestion6.png?raw=true" alt="alt-tag"></p>
+<p>Click on the button with an eye symbol to view the network data as shown in screenshot below.</p>
+<p><img src="https://github.com/CiscoDevNet/data-dev-learning-labs/blob/master/labs/NETWORK%20DATA%20INGESTION/assets/images/NetworkDataIngestion9.png?raw=true" alt="alt-tag"></p>
+<p>PS: The window needs to be refreshed if the output file is not seen.<br>
+&lt;/br&gt;</p>
+<h3><a id="Step_4__Stop_Tasks_in_workspace_112"></a><strong>Step 4 : Stop Tasks in workspace</strong></h3>
+<p>After viewing the network data, stop the tasks by clicking on <strong>Stop</strong> button in “Data Source” and “Transform” columns.<br>
+<img src="https://github.com/CiscoDevNet/data-dev-learning-labs/blob/master/labs/NETWORK%20DATA%20INGESTION/assets/images/NetworkDataIngestion7.png?raw=true" alt="alt-tag"></p>
+<h2><a id="LESSONS_LEARNT_117"></a>LESSONS LEARNT:</h2>
+<ol>
+<li>
+<p>How to ingest network streaming data.</p>
+</li>
+<li>
+<p>How to visualize network data from HDFS via DLP platform.</p>
+</li>
+</ol>
+<h1><a id="Congratulations_You_have_successfully_completed_the_Learning_Lab_124"></a><strong>Congratulations! You have successfully completed the Learning Lab!</strong></h1>
+
+</body></html>
