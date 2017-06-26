@@ -1,20 +1,19 @@
 <!DOCTYPE html><html><head><meta charset="utf-8"><title>Untitled Document.md</title><style></style></head><body id="preview">
-<h1><a id="REAL_TIME_DATA_INGESTION_0"></a>REAL TIME DATA INGESTION</h1>
-<p><strong>Stream Processing Platform Used</strong>: Apache Kafka</p>
+<h1><a id="DATA_INTEGRATION_0"></a>DATA INTEGRATION</h1>
 <p><strong>Executed on</strong>: Hadoop Big Data Platform</p>
-<h2><a id="OVERVIEW_7"></a>OVERVIEW</h2>
-<p>This learning lab can be used as a guide to get a high level understanding on the process of ingesting data real time from different data sources like MQTT, Kafka and Twitter to HDFS using Apache Nifi in to Hadoop environment.</p>
+<h2><a id="OVERVIEW_4"></a>OVERVIEW</h2>
+<p>This learning lab can be used as a guide to get a high level understanding of Data Integration.</p>
+<p>“Data Integration” refers to combining data from incompatible sources into meaningful and valuable information.</p>
+<p>Please refer the example shown below to get a high level understanding:</p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration1.jpeg" alt="alt-tag"></p>
 <p>We will be using DevNet Data Learning Platform referred as “DLP” during the course.</p>
-<h2><a id="PREREQUISITES_13"></a>PRE-REQUISITES</h2>
+<h2><a id="PREREQUISITES_16"></a>PRE-REQUISITES</h2>
 <ol>
 <li>
 <p>Install Chrome Browser.</p>
 </li>
 <li>
 <p>Basic Knowledge of data storage on Hadoop.</p>
-</li>
-<li>
-<p>Basic knowledge of Apache Kafka.</p>
 </li>
 <li>
 <p>Obtain access to Data Learning Platform -<br>
@@ -27,94 +26,156 @@ Refer: <a href="https://github.com/CiscoDevNet/data-dev-learning-labs/blob/maste
 <p>To get familiarized with the DLP (Data Learning Platform).</p>
 </li>
 <li>
-<p>To get familiarized with the ways to ingest real time data from different data sources like MQTT, Kafka and Twitter to HDFS    using Apache Nifi.</p>
+<p>Understand the basics of Data Integration.</p>
 </li>
 <li>
-<p>To get familiarized with the ways to get network data from HDFS.</p>
+<p>Learn how to use different data sources for data integration.</p>
 </li>
 <li>
-<p>To get familiarized with ways to visualize data from DLP platform.</p>
+<p>Learn how to apply transformation logic to combine and display data from different data sources.</p>
 </li>
 </ol>
 <h2><a id="TERMINOLOGIES_USED_36"></a>TERMINOLOGIES USED</h2>
-<h3><a id="WHAT_IS_NETWORK_DATA_39"></a>WHAT IS NETWORK DATA?</h3>
-<p>The Computer network is a telecommunication process which allows computers or devices to exchange data between each other using data pipeline and those devices that are controlled by wired or wireless medium. Those devices are kept alive by exchanging data between each other in a continuous way.</p>
-<p>These network data provide the inside details about communication performance between of two devices that are communicating. We can extract lots of valuable information from those data set if we can capture those data in real time.</p>
-<h2><a id="APACHE_NIFI__AN_INTRODUCTION_45"></a>APACHE NIFI - AN INTRODUCTION</h2>
-<p>NiFi was built to automate the flow of data between systems. The termÿdataflowÿhere refers to automated and managed flow of information between systems. Some of the high-level challenges of dataflow include:</p>
+<h3><a id="WHAT_IS_DATA_INTEGRATION__AN_INTRODUCTION_38"></a>WHAT IS DATA INTEGRATION? - AN INTRODUCTION</h3>
+<p>“Data Integration” refers to combining data from incompatible sources into meaningful and valuable information.<br>
+Please refer the example shown below to get a high level understanding :</p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration2.jpeg?raw=true" alt="alt-tag"></p>
+<p>We are using two different data sources here:</p>
 <ol>
-<li>Systems fail : Networks fail, disks fail, software crashes, people make mistakes.</li>
-<li>Data access exceeds capacity to consume : Sometimes a given data source can outpace some part of the processing or delivery chain - it only takes one weak-link to have an issue.</li>
-<li>Boundary conditions are mere suggestions : You will invariably get data that is too big, too small, too fast, too slow, corrupt, wrong, or in the wrong format.</li>
-<li>What is noise one day becomes signal the next : Priorities of an organization change - rapidly. Enabling new flows and changing existing ones must be fast.</li>
-<li>Systems evolve at different rates : The protocols and formats used by a given system can change anytime and often irrespective of the systems around them. Dataflow exists to connect what is essentially a massively distributed system of components that are loosely or not-at-all designed to work together.</li>
-<li>Compliance and security : Laws, regulations, and policies change. Business to business agreements change. System to system and system to user interactions must be secure, trusted, accountable.</li>
-<li>Continuous improvement occurs in production : It is often not possible to come even close to replicating production environments in the lab.</li>
+<li>
+<p>MySQL - RDBMS data source.</p>
+</li>
+<li>
+<p>Hive - Hadoop data source.</p>
+</li>
 </ol>
-<p>NiFi is built to help tackle these modern dataflow challenges.</p>
+<p>Consider an organization with these two different data sources intends to develop an application or a report. A unified data store is required where data from both the above two data sources can be saved. There should be a unique key or an ID to identify and match the records in each of these data sources. The unified view thus created helps users to get a better understanding of the data, faster decision making, Operational efficiency, Competitive advantage in the market etc.</p>
+<h4><a id="Why_is_Data_Integration_Important_53"></a>Why is Data Integration Important?</h4>
+<p>An enterprise application works well when it has all the data available at one place. Data resides in different data sources and in different formats. Accumulating data from all those data sources and making it in a usable format is a challenging task. Data Integration helps to collect and accumulate data from various data sources and present as a single data pool.</p>
+<p>A brief description to why should every enterprise application have a data integration plan:</p>
+<ol>
+<li>Makes your data always readily available for your application.</li>
+<li>Data Integrity</li>
+<li>Helps to make smarter business decisions by understanding data properly.</li>
+<li>Collaboration of data by connecting the near-&amp;-far data-sources.</li>
+<li>More data availability for the application.</li>
+<li>Reduce data complexity.</li>
+<li>Helps to process structured and un-structured data in to the format required by the application.</li>
+</ol>
+<h4><a id="Trends_of_Data_Integration_in_Modern_Era_67"></a>Trends of Data Integration in Modern Era:</h4>
+<p>Data is the key asset of any enterprise application. Proper availability of data makes the application to run smoothly.  Below are the modern trends of Data Integration operations across the industries:</p>
+<h5><a id="1____Growth_of_complex_regulations_that_surround_the_use_of_data_71"></a>1.    Growth of complex regulations that surround the use of data:</h5>
+<p>Data is scattered and distributed in nature. Accumulating those data and use is a challenge in modern data oriented projects. Complexity of regulated data is growing every day at their own pace. Data integration can help to accumulate and normalize data for further use.</p>
+<h5><a id="2____Support_for_Internet_of_Things_IoT_73"></a>2.    Support for Internet of Things (IoT):</h5>
+<p>Modern industries are focusing on automation by applying Internet of Things (IoT). IoT devices are generating large volume of data every moment. Data Integration platform helps to collect data and make them available to process and develop analytical reports.</p>
+<h5><a id="3____Big_data_trend_on_the_rise_75"></a>3.    Big data trend on the rise:</h5>
+<p>Data warehouse concept is being replaced slowly with Hadoop. Old and traditional approach for data collection is not gaining importance anymore. Hadoop and its’s various tools are replacing the concept of traditional data storaget by applying replication and speed processing/execution. Data Integration thus helps to collect and store data to build a modern Hadoop based data warehouse.</p>
+<h3><a id="TABLEAU__AN_INTRODUCTION_78"></a>TABLEAU - AN INTRODUCTION</h3>
+<p>Tableau is a powerful business intelligence and analytics tool. There are mainly five main products catering to diverse visualization needs for professionals and organizations. They are:</p>
+<p>Tableau Desktop: Made for individual use<br>
+Tableau Server: Collaboration for any organization<br>
+Tableau Online: Business Intelligence in the Cloud<br>
+Tableau Reader: Let you read files saved in Tableau Desktop.<br>
+Tableau Public: For journalists or anyone to publish interactive data online.</p>
+<p>Tableau Desktop is a data visualization application that lets you analyze virtually any type of structured data and produce highly interactive, beautiful graphs, dashboards, and reports. You can connect to virtually any data source from spreadsheets to data warehouses and display information in multiple graphic perspectives.</p>
 <p>For more details, please refer:<br>
-<a href="http://nifi.apache.org/docs/nifi-docs/html/overview.html">http://nifi.apache.org/docs/nifi-docs/html/overview.html</a></p>
-<h2><a id="APACHE_KAFKA__AN_INTRODUCTION_61"></a>APACHE KAFKA - AN INTRODUCTION</h2>
-<p>Kafka is a distributed streaming platform that is designed to be fast, scalable, and durable. It has 3 key capabilities:</p>
-<ol>
-<li>It lets you publish and subscribe to streams of records. In this respect,    it is similar to a message queue or enterprise messaging system.</li>
-<li>It lets you store streams of records in a fault-tolerant way.</li>
-<li>It lets you process streams of records as they occur.</li>
-</ol>
-<p>It is used for two broad classes of application:</p>
-<ol>
-<li>Building real-time streaming data pipelines that reliably get data between systems or applications</li>
-<li>Building real-time streaming applications that transform or react to the streams of data</li>
-</ol>
-<p>For more details, please refer:<br>
-<a href="https://kafka.apache.org/">https://kafka.apache.org/</a></p>
-<h2><a id="PROCESS_OVERVIEW_78"></a>PROCESS OVERVIEW</h2>
-<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/WORD%20COUNT%20USING%20SCALA%20WITH%20APACHE%20SPARK/assets/images/Process14.jpeg?raw=true" alt="alt-tag"></p>
+<a href="http://www.tableau.com/learn/training">http://www.tableau.com/learn/training</a><br>
+<a href="https://community.tableau.com/welcome">https://community.tableau.com/welcome</a></p>
+<h2><a id="PROCESS_OVERVIEW_94"></a>PROCESS OVERVIEW</h2>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/WORD%20COUNT%20USING%20SCALA%20WITH%20APACHE%20SPARK/assets/images/Process12.jpeg?raw=true" alt="alt-tag"></p>
 <p>Please follow the steps given below to launch the workspace and execute the lab.</p>
-<h3><a id="Step_1__Select_Learning_lab_from_DLP_84"></a><strong>Step 1 : Select Learning lab from DLP</strong></h3>
-<p>After launching the DLP dashboard page, navigate to learning labs tab. Select the learning lab “Real Time Data Ingestion” and click on “Start” button as shown in screenshot below:</p>
-<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/REAL%20TIME%20DATA%20INGESTION/assets/images/RTDI1.jpeg?raw=true" alt="alt-tag"></p>
-<h3><a id="Step_2__Workspace_Page_91"></a><strong>Step 2 : Workspace Page</strong></h3>
-<p>On click of Start button, user will be navigated to a workspace page where all the components - IDE, Tools and Microservices required to execute the program are available. Please refer the screenshot below:</p>
-<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/REAL%20TIME%20DATA%20INGESTION/assets/images/RTDI2.jpeg?raw=true" alt="alt-tag"></p>
-<h3><a id="Step_3__Input_and_Output_Configuration_97"></a><strong>Step 3 : Input and Output Configuration</strong></h3>
-<p>Click on the configuration settings button provided in “Tools and Microservices” column. Please refer screenshot below. The input and output configuration existing for the learning lab is shown.</p>
-<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/REAL%20TIME%20DATA%20INGESTION/assets/images/RTDI4.jpeg?raw=true" alt="alt-tag"></p>
-<h3><a id="Step_4__Start_Tasks_in_workspace_103"></a><strong>Step 4 : Start Tasks in workspace</strong></h3>
-<p>Points to Note:</p>
+<h3><a id="Step_1__Select_Learning_lab_from_DLP_100"></a><strong>Step 1 : Select Learning lab from DLP</strong></h3>
+<p>After launching the DLP dashboard page, navigate to learning labs tab. Select the learning lab “Data Integration” and click on “Start” button as shown in screenshot below:</p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration4.jpeg?raw=true" alt="alt-tag"></p>
+<h3><a id="Step_2__Workspace_Page_107"></a><strong>Step 2 : Workspace Page</strong></h3>
+<p>On click of Start button, user will be navigated to a workspace page where all the components - Tools and Microservices required to execute the program are available. Please refer the screenshot below:</p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration5.jpeg?raw=true" alt="alt-tag"></p>
+<h3><a id="Step_3__Input_and_Output_Configuration_113"></a><strong>Step 3 : Input and Output Configuration</strong></h3>
+<p>Click on the configuration settings button provided in “Tools and Microservices” column against each of the services. Click on setting button shown at the top right corner of each service. Please refer screenshot below. The input and output configuration existing for the learning lab is shown:</p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration26.jpeg?raw=true" alt="alt-tag"></p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration27.jpeg?raw=true" alt="alt-tag"></p>
+<h3><a id="Step_4__Start_Data_Integration_service_and_launch_Configuration_Panel_121"></a><strong>Step 4 : Start Data Integration service and launch Configuration Panel</strong></h3>
+<p>Start the Data Integration service under “Tools and Microservices”. Once started, click on “Launch” button to launch the configuration panel. Please refer screenshot below:</p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration3.jpeg?raw=true" alt="alt-tag"></p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration6.jpeg?raw=true" alt="alt-tag"></p>
+<p>There are primarily 3 different data transformation operations performed on the data.</p>
+<p>1.Join</p>
+<p>2.ABS</p>
+<p>3.Sort</p>
+<p><strong>Join Operation:</strong></p>
+<p>JOIN operation helps to merge data from multiple data sources and extract data based on the common fields. In our use case, the inner join will extract data from mysql and hive databases based on the common field - “ID”. If the ID field matches then the data is extracted and the combined data is displayed in a tabular format.</p>
+<p>There are 3 different Join operations supported:</p>
+<ol>
+<li>Inner Join :</li>
+</ol>
+<p>Inner join helps to select records from both the tables(Mysql and Hive tables used as an example here) as long as there is a match between the key fields selected(ID field used in the example shown below) :</p>
+<p>Please refer the screenshot below for more details.</p>
+<p>Configure input:</p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration9.jpeg?raw=true" alt="alt-tag"></p>
+<ol start="2">
+<li>Full Outer Join :</li>
+</ol>
+<p>Full outer join will select all the rows from both the tables(Mysql and Hive tables used as an example here) and displays the combined data in tabular format. It puts NULL in the columns where related records do not exist in the opposite table.</p>
+<p>Please refer the screenshot below for more details.</p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration.jpeg?raw=true" alt="alt-tag"></p>
+<ol start="3">
+<li>Left Join :</li>
+</ol>
+<p>Left Join gets all records from the LEFT linked table but if you have selected some columns from the RIGHT table and if there is no related records then those columns will be marked as NULL.</p>
+<p>Please refer the screenshot below for more details.</p>
+<p>Configure input:</p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration15.jpeg?raw=true" alt="alt-tag"></p>
+<ol start="4">
+<li>ABS Operation:</li>
+</ol>
+<p>ABS stands for Absolute value. ABS function displays any “Integer” field in Absolute format.</p>
+<p>Please refer the screenshot below for more details.</p>
+<p>Configure input:</p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration17.jpeg?raw=true" alt="alt-tag"></p>
+<ol start="5">
+<li>Sort Operation:</li>
+</ol>
+<p>Sort function is used to display the records of a table selected in sorted order. Sort operation works based on a specific field selected. There are sort orders - Ascending and Descending. Based on your selected field and sort order type, the output is displayed in tabular format.</p>
+<p>Sort - Ascending:</p>
+<p>Please refer the screenshot below for more details:</p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration19.jpeg?raw=true" alt="alt-tag"></p>
+<p>Sort - Descending:</p>
+<p>Please refer the screenshot below for more details:</p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration21.jpeg?raw=true" alt="alt-tag"></p>
+<p>Click on Save button to save the details in Hive database as shown in screenshot below:</p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration22.jpeg?raw=true" alt="alt-tag"></p>
+<h3><a id="Step_5__Start_Tableau_Service_206"></a><strong>Step 5 : Start Tableau Service</strong></h3>
 <ul>
-<li>Start the tasks in “Tools and Microservices” column. Please refer screenshot below:</li>
+<li>Start the Tableau service. Please refer screenshot below:</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/REAL%20TIME%20DATA%20INGESTION/assets/images/RTDI3.jpeg?raw=true" alt="alt-tag"></p>
-<ul>
-<li>Once started, the colour of the icon changes to green as shown in screen below:</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/REAL%20TIME%20DATA%20INGESTION/assets/images/RTDI5.jpeg?raw=true" alt="alt-tag"></p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration23.jpeg?raw=true" alt="alt-tag"></p>
 <ul>
 <li>If the task is in stopped status then click on it to start again.</li>
 </ul>
-<p>Data source section will get real-time traffic from traffic server and feed to Kafka cluster. EasyNifi allows to save the real-time data to HDFS. From HDFS, we can visualize the data using visualization tools like Tableau.</p>
-<p>The generated output file is shown in section - “File List”</p>
-<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/REAL%20TIME%20DATA%20INGESTION/assets/images/RTDI6.jpeg?raw=true" alt="alt-tag"></p>
-<p>Click on the button with an eye symbol to view the network data as shown in screenshot below.</p>
-<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/REAL%20TIME%20DATA%20INGESTION/assets/images/RTDI7.jpeg?raw=true" alt="alt-tag"></p>
-<p>PS: The window needs to be refreshed if the output file is not seen.<br>
-&lt;/br&gt;</p>
-<h3><a id="Step_5__Stop_Tasks_in_workspace_131"></a><strong>Step 5 : Stop Tasks in workspace</strong></h3>
-<p>After viewing the network data, stop the task by clicking on <strong>Stop</strong> button in “Tools and Microservices” column. Please refer screenshot below:</p>
-<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/REAL%20TIME%20DATA%20INGESTION/assets/images/RTDI5.jpeg?raw=true" alt="alt-tag"></p>
-<h2><a id="LESSONS_LEARNT_137"></a>LESSONS LEARNT:</h2>
+<h3><a id="Step_6__Launch_Tableau_214"></a><strong>Step 6 : Launch Tableau</strong></h3>
+<p>Click on launch button and user will be navigated to Tableau home page.</p>
+<p>Points to note:</p>
+<p>The pop-up may be blocked in browser configuration. Please refer the screenshot below:</p>
+<p>Click on the pop up blocker icon and select **Always allow pop-up from <a href="http://xxx.xxx.xxx.xxx">http://xxx.xxx.xxx.xxx</a> ** and click on <strong>Done</strong> button.)</p>
+<p><img src="https://github.com/CiscoDevNet/data-dev-learning-labs/blob/master/labs/DATA%20EXPLORATION%2C%20ANALYSIS%20AND%20VISUALIZATION%20USING%20APACHE%20ZEPPELIN/assets/popUpBlockerAllowed1.jpeg?raw=true" alt="Figure"></p>
+<p><img src="https://github.com/CiscoDevNet/data-dev-learning-labs/blob/master/labs/DATA%20EXPLORATION%2C%20ANALYSIS%20AND%20VISUALIZATION%20USING%20APACHE%20ZEPPELIN/assets/popUpBlockerAllowed2.jpeg?raw=true" alt="Figure"></p>
+<p>On enabling the pop-up, Tableau workbook would open in a separate tab and user can view the data dimensions and measures as shown in screenshot below:</p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration24.jpeg?raw=true" alt="alt-tag"></p>
+<h3><a id="Step_7__Explore_Tableau_232"></a><strong>Step 7 : Explore Tableau</strong></h3>
+<p>User can now explore the data with drag and drop operations and create reports as shown in screenshot below:</p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/DATA%20INTEGRATION/assets/images/DataIntegration25.jpeg?raw=true" alt="alt-tag"></p>
+<h2><a id="LESSONS_LEARNT_240"></a>LESSONS LEARNT:</h2>
 <ol>
 <li>
-<p>How to ingest real time data from different data sources like MQTT, Kafka and Twitter to HDFS using Apache Nifi.</p>
+<p>Basics of Data Integration.</p>
 </li>
 <li>
-<p>How to get network data from HDFS.</p>
+<p>How to use different data sources for data integration.</p>
 </li>
 <li>
-<p>How to visualize data from HDFS via DLP platform.</p>
+<p>How to apply transformation logic to combine and display data from different data sources.</p>
 </li>
 </ol>
-<h1><a id="Congratulations_You_have_successfully_completed_the_Learning_Lab_145"></a><strong>Congratulations! You have successfully completed the Learning Lab!</strong></h1>
+<h1><a id="Congratulations_You_have_successfully_completed_the_Learning_Lab_248"></a><strong>Congratulations! You have successfully completed the Learning Lab!</strong></h1>
 
 </body></html>
