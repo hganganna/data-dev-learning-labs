@@ -1,8 +1,8 @@
 {
-	"labId": "BASIC DATA VISUALIZATION USING APACHE ZEPPELIN",
-	"title": "Basic data visualization using Apache Zeppelin",
+	"labId": "TENSORFLOW 101",
+	"title": "Learn how to use Tensorflow for Deep Learning",
 	"slug": "Learn how data engineers, data analysts and data scientists can be more productive",
-	"time": 30,
+	"time": 25,
 	"tags": [{
 		"title": "data"
 	}, {
