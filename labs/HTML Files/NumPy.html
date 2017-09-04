@@ -4,13 +4,13 @@
 <p><strong>Executed on</strong> : Hadoop Big Data Platform</p>
 <p><strong>Visualization Tool Used</strong> : Apache Zeppelin</p>
 <h2><a id="OVERVIEW_8"></a>OVERVIEW</h2>
-<p>This learning lab can be used as a guide to get a high level understanding of Python. The prime focus would be to,</p>
+<p>This learning lab can be used as a guide to get a high level understanding of Python. The main objective is to get familiar with:</p>
 <ol>
 <li>
-<p>Get a basic understanding of Python.</p>
+<p>Basics of NumPy.</p>
 </li>
 <li>
-<p>Learn how to execute basic Python functions.</p>
+<p>Learn how to execute basic NumPy functions using Apache Zeppelin.</p>
 </li>
 </ol>
 <p>We will be using DevNet Data Learning Platform referred as “DLP” during the course.</p>
@@ -33,10 +33,10 @@ Refer: <a href="https://github.com/CiscoDevNet/data-dev-learning-labs/blob/maste
 <p>To get familiarized with the DLP (Data Learning Platform)</p>
 </li>
 <li>
-<p>To get familiarized with Python.</p>
+<p>To get familiarized with Python and usage of NumPy.</p>
 </li>
 <li>
-<p>To get familiarized with the Apache Zeppelin usage for executing Python functions.</p>
+<p>To get familiarized with the Apache Zeppelin usage for executing Python functions with NumPy.</p>
 </li>
 </ol>
 <h2><a id="TERMINOLOGIES_USED_35"></a>TERMINOLOGIES USED</h2>
@@ -97,118 +97,164 @@ after Monty Python</p>
 <p>For more details, please refer:<br>
 <a href="https://www.python.org/">https://www.python.org/</a><br>
 <a href="https://en.wikipedia.org/wiki/Python_(programming_language)">https://en.wikipedia.org/wiki/Python_(programming_language)</a></p>
-<h2><a id="PROCESS_OVERVIEW_96"></a>PROCESS OVERVIEW</h2>
+<h3><a id="NUMPY__AN_INTRODUCTION_97"></a>NUMPY - AN INTRODUCTION</h3>
+<p>NumPy is the core library for scientific computing in Python. It provides a high-performance multidimensional array object, and tools for working with these arrays.</p>
+<p>Besides Python, there are a number of open source libraries generally used to facilitate practical machine learning. In general, these are the main so-called scientific Python libraries we put to use when performing elementary machine learning tasks:</p>
+<p>NumPy - Mainly useful for its N-dimensional array objects<br>
+SciPy - A collection of mathematical algorithms and convenience functions built on the NumPy extension of Python<br>
+Pandas - Python data analysis library, including structures such as dataframes<br>
+Matplotlib - Plotting library which produces publication quality figures</p>
+<p><strong>Why do people use NumPy?</strong></p>
+<ul>
+<li>A powerful N-dimensional array object</li>
+<li>Sophisticated (broadcasting) functions</li>
+<li>Tools for integrating C/C++ and Fortran code</li>
+<li>Useful linear algebra, Fourier transform, and random number capabilities</li>
+<li>Besides its obvious scientific uses, NumPy can also be used as an efficient multi-dimensional container of generic data.</li>
+<li>Arbitrary data-types can be defined. This allows NumPy to seamlessly and speedily integrate with a wide variety of<br>
+databases.</li>
+</ul>
+<p>For more details, please refer:<br>
+<a href="http://www.numpy.org/">http://www.numpy.org/</a></p>
+<h2><a id="PROCESS_OVERVIEW_122"></a>PROCESS OVERVIEW</h2>
 <p>In this learning lab, we will focus on how to execute basic Python commands.</p>
-<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/WORD%20COUNT%20USING%20SCALA%20WITH%20APACHE%20SPARK/assets/images/Process13.jpeg?raw=true" alt="alt-tag"></p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/WORD%20COUNT%20USING%20SCALA%20WITH%20APACHE%20SPARK/assets/images/Process18.jpeg?raw=true" alt="alt-tag"></p>
 <p>Please follow the steps given below to launch the workspace and execute the program.</p>
-<h3><a id="Step_1__Select_Learning_Lab_from_DLP_104"></a><strong>Step 1 : Select Learning Lab from DLP</strong></h3>
+<h3><a id="Step_1__Select_Learning_Lab_from_DLP_130"></a><strong>Step 1 : Select Learning Lab from DLP</strong></h3>
 <p>After launching the DLP dashboard page, navigate to learning labs tab. Select the learning lab “Python 101” and click on “Start” button as shown in screenshot below:</p>
-<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/HADOOP%20101%20WITH%20BASIC%20TERMINAL%20HANDS-ON%20EXERCISES/assets/images/Python1.jpeg?raw=true" alt="alt-tag"></p>
-<h3><a id="Step_2__Workspace_Page_110"></a><strong>Step 2 : Workspace Page</strong></h3>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/NUMPY%20101/assets/images/NumPy1.jpeg?raw=true" alt="alt-tag"></p>
+<h3><a id="Step_2__Workspace_Page_136"></a><strong>Step 2 : Workspace Page</strong></h3>
 <p>On click of Start button, you will be navigated to a workspace page where all the components - IDE, Tools and Microservices required to execute the program are made available. Please refer the screenshot below:</p>
-<p><img src="https://raw.githubusercontent.com/lpalamth/data-dev-learning-labs/master/labs/HADOOP%20101%20WITH%20BASIC%20TERMINAL%20HANDS-ON%20EXERCISES/assets/images/Python2.jpeg?raw=true" alt="alt-tag"></p>
-<h3><a id="Step_3__Start_Service_in_Workspace_116"></a><strong>Step 3 : Start Service in Workspace</strong></h3>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/NUMPY%20101/assets/images/NumPy2.jpeg?raw=true" alt="alt-tag"></p>
+<h3><a id="Step_3__Start_Service_in_Workspace_142"></a><strong>Step 3 : Start Service in Workspace</strong></h3>
 <p>Points to Note:</p>
 <ul>
 <li>Start the Zeppelin service.Please refer screenshot below:</li>
 </ul>
-<p><img src="https://github.com/CiscoDevNet/data-dev-learning-labs/blob/master/labs/BASIC%20DATA%20VISUALIZATION%20USING%20APACHE%20ZEPPELIN/assets/images/Python3.jpeg?raw=true" alt="Figure"></p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/NUMPY%20101/assets/images//NumPy3.jpeg?raw=true" alt="Figure"></p>
 <ul>
 <li>Once started, the colour of the icon changes to green and launch button is enabled.</li>
 </ul>
-<p><img src="https://github.com/CiscoDevNet/data-dev-learning-labs/blob/master/labs/BASIC%20DATA%20VISUALIZATION%20USING%20APACHE%20ZEPPELIN/assets/images/Python4.jpeg?raw=true" alt="Figure"></p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/NUMPY%20101/assets/images//NumPy4.jpeg?raw=true" alt="Figure"></p>
 <ul>
 <li>If the task is in stopped status then click on it to start again.</li>
 </ul>
-<h3><a id="Step_4__Launch_Zeppelin_130"></a><strong>Step 4 : Launch Zeppelin</strong></h3>
+<h3><a id="Step_4__Launch_Zeppelin_156"></a><strong>Step 4 : Launch Zeppelin</strong></h3>
 <p>Click on launch button and user will be navigated to Zeppelin home page.</p>
 <p>Points to note:</p>
 <p>(The pop-up may be blocked in browser configuration. Click on the red pop up blocker icon and select **Always allow pop-up from <a href="http://xxx.xxx.xxx.xxx">http://xxx.xxx.xxx.xxx</a> ** and click on <strong>Done</strong> button.)</p>
-<p><img src="https://github.com/CiscoDevNet/data-dev-learning-labs/blob/master/labs/DATA%20EXPLORATION%2C%20ANALYSIS%20AND%20VISUALIZATION%20USING%20APACHE%20ZEPPELIN/assets/popUpBlockerAllowed.PNG?raw=true" alt="Figure"></p>
+<p><img src="https://github.com/CiscoDevNet/data-dev-learning-labs/blob/master/labs/DATA%20EXPLORATION%2C%20ANALYSIS%20AND%20VISUALIZATION%20USING%20APACHE%20ZEPPELIN/assets/popUpBlockerAllowed1.jpeg?raw=true" alt="Figure"></p>
+<p><img src="https://github.com/CiscoDevNet/data-dev-learning-labs/blob/master/labs/DATA%20EXPLORATION%2C%20ANALYSIS%20AND%20VISUALIZATION%20USING%20APACHE%20ZEPPELIN/assets/popUpBlockerAllowed2.jpeg?raw=true" alt="Figure"></p>
 <p>On enabling the pop-up, Zeppelin would open in a new window taking the user to Zeppelin home page as shown in screenshot below.</p>
-<p><img src="https://github.com/CiscoDevNet/data-dev-learning-labs/blob/master/labs/BASIC%20DATA%20VISUALIZATION%20USING%20APACHE%20ZEPPELIN/assets/images/Python5.jpeg?raw=true" alt="Figure"></p>
-<h3><a id="Step_5__Select_Zeppelin_notebook_145"></a><strong>Step 5 : Select Zeppelin notebook</strong></h3>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/NUMPY%20101/assets/images//NumPy5.jpeg?raw=true" alt="Figure"></p>
+<h3><a id="Step_5__Select_Zeppelin_notebook_174"></a><strong>Step 5 : Select Zeppelin notebook</strong></h3>
 <ul>
-<li>Select pre-created notebook - “Python 101” from home page as shown in screenshot below:</li>
+<li>Select pre-created notebook - “NumPy” from home page as shown in screenshot below:</li>
 </ul>
-<p><img src="https://github.com/CiscoDevNet/data-dev-learning-labs/blob/master/labs/BASIC%20DATA%20VISUALIZATION%20USING%20APACHE%20ZEPPELIN/assets/images/Python6.jpeg?raw=true" alt="Figure"></p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/NUMPY%20101/assets/images//NumPy13.jpeg?raw=true" alt="Figure"></p>
 <ul>
 <li>The Zeppelin interactive,development and visualisation environment is now ready for use. The pre-created notebook has all the codes required for executing this learning lab. Each of the code shown below needs to be executed sequentially.</li>
 </ul>
-<h3><a id="Step_6__Execute_Python_Code_153"></a><strong>Step 6 : Execute Python Code</strong></h3>
-<p>The following codes are provided in Zeppelin :</p>
+<h3><a id="Step_6__Execute_Python_Code_182"></a><strong>Step 6 : Execute Python Code</strong></h3>
+<p>The following codes are provided in Zeppelin to understand the usage of NumPy :</p>
 <ol>
-<li>Print Hello World</li>
+<li>Basic Operations:</li>
 </ol>
 <p>The code is as follows:</p>
 <pre><code class="language-json">%python
-import sys
-print(sys.version)
-print('Hello World!')
+import numpy as np
+
+a = np.array( [[10,20,30,40,50], [20, 30, 40, 50, 60]] )
+b = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
+
+#Arithmetic operators on arrays are applied elementwise
+c = a-b
+print(c)
+c.shape
+c.ndim
+c.size
 </code></pre>
 <ol start="2">
-<li>If Statement Example</li>
+<li>Universal Functions</li>
 </ol>
 <p>The code is as follows:</p>
 <pre><code class="language-json">%python
-age = 5
 
-if age &gt;= 18:
-    print('adult')
-elif age &gt;= 7:
-    print('teenager')
-else:
-    print('kid')
+A = np.arange(15).reshape(3,5)
+print(A)
+# sum of each column
+A.sum(axis=0)
+# min of each row
+A.min(axis=1)
+# cumulative sum along each row
+A.cumsum(axis=1)
+
+np.exp(A)
+np.sqrt(A)
 </code></pre>
 <ol start="3">
-<li>For Statement Example</li>
+<li>Stacking together different arrays :</li>
 </ol>
 <p>The code is as follows:</p>
 <pre><code class="language-json">%python
-sum = 0
-for x in range(101):
-    sum = sum + x
-
-print(sum)
+a = np.floor(20*np.random.random((2,2)))
+print(a)
+b = np.floor(20*np.random.random((2,2)))
+print(b)
+np.hstack((a,b))
+np.vstack((a,b))
 </code></pre>
 <ol start="4">
-<li>Slice Example</li>
+<li>Indexing with Arrays of Indices and Boolean Arrays</li>
 </ol>
 <p>The code is as follows:</p>
 <pre><code class="language-json">%python
-L = list(range(50))
-L[:5]
-L[-5:]
-L[10:15]
-L[:20:3]
-L[::10]
+a = np.arange(15).reshape(3,5)
+print(a)
+# indices for the first dim of a
+i = np.array([[0, 1], [2, 2]])
+# indices for the second dim
+j = np.array([[2, 0], [3, 1]])
+a[i,j]
+
+# first dim selection
+b1 = np.array([False,True,True])
+# selecting rows
+a[b1,:] 
+
+# second dim selection
+b2 = np.array([True,False,True,False, False])
+# selecting columns
+a[:,b2]
 </code></pre>
 <ol start="5">
-<li>Map/Reduce Example</li>
+<li>Linear Algebra</li>
 </ol>
 <p>The code is as follows:</p>
 <pre><code class="language-json">%python
-def f(x):
-    return x*x
+A = np.arange(4).reshape(2,2)
+print(A)
+A.transpose()
+np.linalg.inv(A)
 
-r = map(f, list(range(5)))
-m = list(r)
-print(m)
-
-from functools import reduce
-def add(x, y):
-    return x+y
-
-reduce(add, m)
+B = np.array( [[2,1], [3,4]] )
+# elementwise product
+A*B
+# matrix product
+A.dot(B)
 </code></pre>
 <p>Execute the code by clicking on the “Ready” icon highlighted as shown in screenshot below:.</p>
-<p><img src="https://github.com/CiscoDevNet/data-dev-learning-labs/blob/master/labs/BASIC%20DATA%20VISUALIZATION%20USING%20APACHE%20ZEPPELIN/assets/images/Python7.jpeg?raw=true" alt="Figure"></p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/NUMPY%20101/assets/images//NumPy7.jpeg?raw=true" alt="Figure"></p>
 <p>On successful execution of code, you can view the output as shown in screenshot below:</p>
-<p><img src="https://github.com/CiscoDevNet/data-dev-learning-labs/blob/master/labs/BASIC%20DATA%20VISUALIZATION%20USING%20APACHE%20ZEPPELIN/assets/images/Python8.jpeg?raw=true" alt="Figure"></p>
-<h2><a id="LESSONS_LEARNT__236"></a>LESSONS LEARNT :</h2>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/NUMPY%20101/assets/images//NumPy8.jpeg?raw=true" alt="Figure"></p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/NUMPY%20101/assets/images//NumPy9.jpeg?raw=true" alt="Figure"></p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/NUMPY%20101/assets/images//NumPy10.jpeg?raw=true" alt="Figure"></p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/NUMPY%20101/assets/images//NumPy11.jpeg?raw=true" alt="Figure"></p>
+<p><img src="https://raw.githubusercontent.com/CiscoDevNet/data-dev-learning-labs/master/labs/NUMPY%20101/assets/images//NumPy12.jpeg?raw=true" alt="Figure"></p>
+<h2><a id="LESSONS_LEARNT__295"></a>LESSONS LEARNT :</h2>
 <ol>
-<li>How to write and execute basic Python functions in Apache Zeppelin.</li>
+<li>How to write and execute basic Python functions using NumPy in Apache Zeppelin.</li>
 </ol>
-<h2><a id="Congratulations_You_have_successfully_completed_the_Learning_Lab_240"></a><strong>Congratulations! You have successfully completed the Learning Lab!</strong></h2>
+<h2><a id="Congratulations_You_have_successfully_completed_the_Learning_Lab_299"></a><strong>Congratulations! You have successfully completed the Learning Lab!</strong></h2>
 
 </body></html>
