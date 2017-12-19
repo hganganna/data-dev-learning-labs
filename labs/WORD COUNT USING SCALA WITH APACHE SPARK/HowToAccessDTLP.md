@@ -1,15 +1,15 @@
-# HOW TO OBTAIN ACCESS TO DATA TECHNOLOGY LEARNING PLATFORM (DTLP)
+# HOW TO OBTAIN ACCESS TO DATA LEARNING PLATFORM (DLP)
 
-### WHAT IS DTLP? ###
+### WHAT IS DLP? ###
 
-The DevNet Data Technology Learning Platform (DTLP) is a Big-Data learning platform connected with an easy to learn UI to help you break into the world of Big-Data development.  Backed with Docker, best-in-class open source Big-Data tools and Cisco API’s, Big-Data Scientists and Developers can leverage DTLP to easily build solutions, visualize data and turn POC’s for production applications. The DTLP environment comes with an inbuilt cloud based IDE (Integrated Development Environment) built on Hadoop.
+The DevNet Data Learning Platform (DLP) is a Big-Data learning platform connected with an easy to learn UI to help you break into the world of Big-Data development.  Backed with Docker, best-in-class open source Big-Data tools and Cisco API’s, Big-Data Scientists and Developers can leverage DLP to easily build solutions, visualize data and turn POC’s for production applications. The DLP environment comes with an inbuilt cloud based IDE (Integrated Development Environment) built on Hadoop.
 
 For more details, please refer:</br>
 https://developer.cisco.com/site/dlp/docs/overview/</br>
 
-Please follow the steps given below to obtain access to Data Technology Learning Platform(DTLP)
+Please follow the steps given below to obtain access to Data Learning Platform(DLP)
 
-### <b>Step 1 : Access DTLP website</b>
+### <b>Step 1 : Access DLP website</b>
 
 Access the link - https://developer.cisco.com/site/dlp/ and click on the button "Access Now". Please refer the screen shown below:</br>
 
@@ -45,13 +45,13 @@ On successful registration, navigate back to the DTLP login page and login with 
 
 ![alt-tag](https://github.com/CiscoDevNet/data-dev-learning-labs/blob/master/labs/WORD%20COUNT%20USING%20SCALA%20WITH%20APACHE%20SPARK/assets/images/UserAccess3.jpeg?raw=true)
 
-### <b>Step 2 : DTLP Dashboard Page</b>
+### <b>Step 2 : DLP Dashboard Page</b>
 
-On login, you will be directed to the DevNet DTLP (Data Technology Learning Platform)dashboard page as shown in the screenshot below:
+On login, you will be directed to the DevNet DLP (Data Technology Learning Platform)dashboard page as shown in the screenshot below:
 
 ![alt-tag](https://github.com/CiscoDevNet/data-dev-learning-labs/blob/master/labs/WORD%20COUNT%20USING%20SCALA%20WITH%20APACHE%20SPARK/assets/images/UserAccess4.jpeg?raw=true)
 
 
 ## LESSONS LEARNT :
 
-1. How to obtain access to Data Technology Learning Platform (DTLP).
+1. How to obtain access to Data Learning Platform (DLP).
