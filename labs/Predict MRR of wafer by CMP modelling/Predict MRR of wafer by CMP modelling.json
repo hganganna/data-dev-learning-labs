@@ -1,0 +1,20 @@
+{
+	"labId": "TENSORFLOW 101",
+	"title": "Learn how to predict MRR of wafer by CMP modelling”,
+	"slug": "Learn how data engineers, data analysts and data scientists can be more productive",
+	"time": 45,
+	"tags": [{
+		"title": "data"
+	}, {
+		"title": "DLP"
+	}],
+	"files": [{
+		"title": "1.md"
+	}],
+
+	"authors": [{
+		"name": "Leena P.G",
+		"email": "lpalamth @cisco.com"
+	}],
+	"active": true
+}
